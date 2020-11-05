@@ -1,3 +1,14 @@
 module.exports = {
-  transpileDependencies: ["vuetify"]
-};
+  transpileDependencies: [
+    'vuetify'
+  ],
+  pluginOptions: {
+    electronBuilder: {
+      nodeIntegration: true,
+      nodeModulesPath: ['../../node_modules', './node_modules']
+    }
+  },
+  configureWebpack: {
+    devtool: 'source-map'
+  }
+}
